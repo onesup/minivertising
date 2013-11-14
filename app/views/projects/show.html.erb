@@ -1,44 +1,50 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Title:</strong>
-  <%= @project.title %>
-</p>
-
-<p>
-  <strong>Sub title:</strong>
-  <%= @project.sub_title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= @project.description %>
-</p>
-
-<p>
-  <strong>Category:</strong>
-  <%= @project.category %>
-</p>
-
-<p>
-  <strong>Client:</strong>
-  <%= @project.client %>
-</p>
-
-<p>
-  <strong>Made at:</strong>
-  <%= @project.made_at %>
-</p>
-
-<p>
-  <strong>Link:</strong>
-  <%= @project.link %>
-</p>
-
-<p>
-  <strong>Project image:</strong>
-  <%= @project.project_image %>
-</p>
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
+<div id="wrapper">
+	<div class="container pos-center projects">
+		<h2 class="font-Oswald margint60"><%= @project.title %></h2>
+		<p class="margint5"><%= @project.sub_title %></p>
+		<div class="project-slider margint20">
+      <%= image_tag @project.project_big.url, class: "img-responsive"%>
+		</div>
+		<div class="row margint50 pos-left project-info-box">
+			<div class="col-lg-4">
+				<h3 class="font-Oswald">ABOUT PROJECT</h3>
+				<p class="margint20"><%= @project.description %></p>
+			</div>
+			<div class="col-lg-4">
+				<h3 class="font-Oswald">PROJECT DETAILS</h3>
+				<ul class="project-det margint10">
+					<li class="clearfix">
+						<div class="pull-left list-title">CATEGORY</div>
+						<div class="pull-right list-desc"><%= @project.category %></div>
+					</li>
+					<li class="clearfix">
+						<div class="pull-left list-title">CLIENT</div>
+						<div class="pull-right list-desc"><%= @project.client %></div>
+					</li>
+					<li class="clearfix">
+						<div class="pull-left list-title">DATE</div>
+						<div class="pull-right list-desc"><%= @project.made_at.strftime("%Y. %m") %></div>
+					</li>
+				</ul>
+			</div>
+			<div class="col-lg-4">
+				<h3 class="font-Oswald">PROJECT WEBSITE</h3>
+				<!-- <p class="margint20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem.</p> -->
+        <%= link_to @project.website_link do %>
+          <%= @project.website_link.html_safe %>&nbsp<i class="icon-external-link"></i>
+        <% end %>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="/js/vendor/jquery-1.10.1.min.js"></script>
+<script src="/js/vendor/bootstrap.min.js"></script>
+<script src="/js/jquery.nicescroll.min.js"></script>
+<script src="/js/retina-1.1.0.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+	var projectWinH = $(window).height();
+	$('.projects').css('height',projectWinH+10);
+	$("html").niceScroll();
+	});
+</script>
