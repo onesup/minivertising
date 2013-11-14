@@ -11,6 +11,6 @@ module Minivertising
     config.autoload_paths += %W(#{config.root}/lib/)
     config.assets.enabled = true
     config.time_zone = 'Asia/Seoul'
-    config.assets.precompile += ['application.js', 'application.css', 'admin.js', 'admin.css']
+    config.assets.precompile += ['admin.js', 'admin.css']
   end
 end
