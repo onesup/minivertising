@@ -173,78 +173,7 @@
 		<p class="info margint30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ratione harum commodi eum aperiam accusantium quaerat eius iure ut cupiditate esse atque molestias mollitia sit vero animi ipsa quo odio?</p>
 		<div class="work-list margint60 padb60">
 			<ul class="clearfix">
-				<li>
-					<a class="iframe portfolio-group" href="project-slide.html" title="">
-						<img src="temp/portfolio-img-1.jpg" alt="" class="img-responsive" />
-						<div class="mask">
-							<h2 class="font-Oswald">PROJECT TITLE</h2>
-							<div class="margint20"><i class="icon-camera"></i></div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a class="iframe portfolio-group" href="project.html" title="">
-						<img src="temp/portfolio-img-2.jpg" alt="" class="img-responsive" />
-						<div class="mask">
-							<h2 class="font-Oswald">PROJECT TITLE</h2>
-							<div class="margint20"><i class="icon-search"></i></div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a class="iframe portfolio-group" href="project-video.html" title="">
-						<img src="temp/portfolio-img-3.jpg" alt="" class="img-responsive" />
-						<div class="mask">
-							<h2 class="font-Oswald">PROJECT TITLE</h2>
-							<div class="margint20"><i class="icon-play-sign"></i></div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a class="iframe portfolio-group" href="project.html" title="">
-						<img src="temp/portfolio-img-4.jpg" alt="" class="img-responsive" />
-						<div class="mask">
-							<h2 class="font-Oswald">PROJECT TITLE</h2>
-							<div class="margint20"><i class="icon-search"></i></div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a class="iframe portfolio-group" href="project-video.html" title="">
-						<img src="temp/portfolio-img-5.jpg" alt="" class="img-responsive" />
-						<div class="mask">
-							<h2 class="font-Oswald">PROJECT TITLE</h2>
-							<div class="margint20"><i class="icon-play-sign"></i></div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a class="iframe portfolio-group" href="project-slide.html" title="">
-						<img src="temp/portfolio-img-6.jpg" alt="" class="img-responsive" />
-						<div class="mask">
-							<h2 class="font-Oswald">PROJECT TITLE</h2>
-							<div class="margint20"><i class="icon-camera"></i></div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a class="iframe portfolio-group" href="project.html" title="">
-						<img src="temp/portfolio-img-7.jpg" alt="" class="img-responsive" />
-						<div class="mask">
-							<h2 class="font-Oswald">PROJECT TITLE</h2>
-							<div class="margint20"><i class="icon-search"></i></div>
-						</div>
-					</a>
-				</li>
-				<li>
-					<a class="iframe portfolio-group" href="project-video.html" title="">
-						<img src="temp/portfolio-img-8.jpg" alt="" class="img-responsive" />
-						<div class="mask">
-							<h2 class="font-Oswald">PROJECT TITLE</h2>
-							<div class="margint20"><i class="icon-play-sign"></i></div>
-						</div>
-					</a>
-				</li>
+        <%= render partial: "project", collection: @projects %>
 			</ul>
 		</div>
 	</div>

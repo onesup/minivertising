@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 20131114074341) do
   create_table "projects", force: true do |t|
     t.string   "title"
     t.string   "sub_title"
-    t.string   "description"
+    t.text     "description"
     t.string   "category"
     t.string   "client"
     t.string   "video_link"

@@ -1,0 +1,78 @@
+<%= form_for([:admin, @project]) do |f| %>
+  <% if @project.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
+
+      <ul>
+      <% @project.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row-fluid">
+      <!-- block -->
+      <div class="block">
+          <div class="navbar navbar-inner block-header">
+              <div class="muted pull-left">프로젝트 "<%= @project.title %>" 정보 수정</div>
+          </div>
+          <div class="block-content collapse in">
+              <div class="span12">
+                   <form class="form-horizontal">
+                    <fieldset>
+                      <div class="control-group">
+                        <label class="control-label">썸네일(510x268)</label>
+                        <div>
+                          <%= image_tag @project.project_thumbnail unless @project.project_thumbnail.nil? %>
+                        </div>
+                        <div class="controls">
+                          <div class="uploader hover" id="uniform-fileInput">
+                            <%= f.file_field :project_thumbnail %>
+                          </div>
+                          <span class="help-inline">메인페이지 표시.</span>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label">원래크기(1170x615)</label>
+                        <div>
+                          <%= image_tag @project.project_big unless @project.project_big.nil? %>
+                        </div>
+                        <div class="controls">
+                          <div class="uploader hover" id="uniform-fileInput">
+                            <%= f.file_field :project_big %>
+                          </div>
+                          <span class="help-inline">메인페이지 표시.</span>
+                        </div>
+                      </div>
+                      
+                      <div class="control-group">
+                        <label class="control-label" for="focusedInput">제목</label>
+                        <div class="controls">
+                          <%= f.text_field :title, id: "focusdInput", class: "input-xlarge focused" %>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label">내용</label>
+                        <div class="controls">
+                          <%= f.text_area :description, id: "focusdInput", class: "input-xlarge focused", style: "width: 600px; height: 200px" %>  
+                          <span class="help-inline">HTML 사용 가능.</span>
+                        </div>
+                      </div>
+                      <div class="control-group">
+                        <label class="control-label" for="focusedInput">제목</label>
+                        <div class="controls">
+                          <%= f.text_field :title, id: "focusdInput", class: "input-xlarge focused" %>
+                        </div>
+                      </div>
+                      <div class="form-actions">
+                        <%= f.submit class: "btn btn-primary"  %>
+                        <%= link_to "취소", admin_path, class: "btn"%>
+                      </div>
+                    </fieldset>
+                  </form>
+              </div>
+          </div>
+      </div>
+      <!-- /block -->
+  </div>
+<% end %>
