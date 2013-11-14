@@ -1,5 +1,7 @@
 Minivertising::Application.routes.draw do
-  get "home/index"
+  get "construction/index"
+  get 'home', to: 'home#index'
+  resources :projects
   devise_for :users
-  root :to => "home#index"
+  root :to => "construction#index"
 end
