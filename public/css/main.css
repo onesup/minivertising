@@ -729,11 +729,11 @@ body {
 	-o-transform:  scaleY(1);
 	-ms-transform:  scaleY(1);
 	transform:  scaleY(1);
-	-webkit-transition:  all 0.7s ease-in-out;
-	-moz-transition:  all 0.7s ease-in-out;
-	-o-transition:  all 0.7s ease-in-out;
-	-ms-transition:  all 0.7s ease-in-out;
-	transition:  all 0.7s ease-in-out;
+  -webkit-transition:  all 0.7s ease-in-out;
+  -moz-transition:  all 0.7s ease-in-out;
+  -o-transition:  all 0.7s ease-in-out;
+  -ms-transition:  all 0.7s ease-in-out;
+  transition:  all 0.7s ease-in-out;
 }
 
 .work-list ul li .mask {
@@ -756,15 +756,15 @@ body {
 }
 
 .work-list ul li:hover img {
-	-webkit-transform:  scale(1.2);
-	-moz-transform:  scale(1.2);
-	-o-transform:  scale(1.2);
-	-ms-transform:  scale(1.2);
-	transform:  scale(1.2);
-	-ms-filter:  "progid:  DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	filter:  alpha(opacity=0);
-	opacity:  1;
-}
+/*  -webkit-transform:  scale(1.2);
+  -moz-transform:  scale(1.2);
+  -o-transform:  scale(1.2);
+  -ms-transform:  scale(1.2);
+  transform:  scale(1.2);
+  -ms-filter:  "progid:  DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  filter:  alpha(opacity=0);
+  opacity:  1;
+*/}
 
 .work-list ul li:hover .mask {
 	-ms-filter:  "progid:  DXImageTransform.Microsoft.Alpha(Opacity=100)";

@@ -1,0 +1,15 @@
+<div class="wor-list margint60 padb60">
+	<ul class="clearfix">
+  <% @projects.each do | project | %>
+  <li>
+    <%= link_to project_path(project.id), class: "iframe portfolio-group cboxElement", title: "" do %>
+      <%= image_tag project.project_thumbnail, class: "img-responsive"%>
+  		<div class="mask">
+  			<h2 class="font-Oswald"><%= project.title %></h2>
+  			<div class="margint20"><i class="icon-camera"></i></div>
+  		</div>
+    <% end %>
+  </li>
+  <% end %>
+</ul>
+</div>
