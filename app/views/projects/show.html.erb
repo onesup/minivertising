@@ -3,7 +3,13 @@
 		<h2 class="font-Oswald margint60"><%= @project.title %></h2>
 		<p class="margint5"><%= @project.sub_title %></p>
 		<div class="project-slider margint20">
-      <%= image_tag @project.project_big.url, class: "img-responsive"%>
+      <div class="slider-wrapper theme-default">
+        <div id="project-slider-wrapper" class="nivoSlider">
+          <%= image_tag @project.project_big.url, class: "img-responsive"%>
+          <%= image_tag @project.project_big.url, class: "img-responsive"%>
+          <%= image_tag @project.project_big.url, class: "img-responsive"%>
+        </div>
+      </div>
 		</div>
 		<div class="row margint50 pos-left project-info-box">
 			<div class="col-lg-4">
@@ -40,11 +46,17 @@
 <script src="/js/vendor/jquery-1.10.1.min.js"></script>
 <script src="/js/vendor/bootstrap.min.js"></script>
 <script src="/js/jquery.nicescroll.min.js"></script>
+<script src="/js/jquery.nivo.slider.pack.js"></script>
 <script src="/js/retina-1.1.0.min.js"></script>
 <script type="text/javascript">
 	$(document).ready(function() {
 	var projectWinH = $(window).height();
 	$('.projects').css('height',projectWinH+10);
 	$("html").niceScroll();
+	$('#project-slider-wrapper').nivoSlider({
+		effect: 'fade',
+		controlNav: false
+	});
+  
 	});
 </script>

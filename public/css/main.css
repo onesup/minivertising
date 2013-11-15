@@ -2095,3 +2095,8 @@ body {
 /* .(3) */
 .count-0 span:nth-child(10) {top: -8px;}
 /* LOADING */
+div.fb_like{
+/*  text-align: right;*/
+  padding-top: 22px;
+  padding-left: 124px;
+}
