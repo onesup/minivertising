@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131114074341) do
+ActiveRecord::Schema.define(version: 20131115083330) do
+
+  create_table "project_pictures", force: true do |t|
+    t.string   "path"
+    t.string   "project_big"
+    t.string   "project_thumbnail"
+    t.integer  "project_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "projects", force: true do |t|
     t.string   "title"
@@ -22,8 +31,9 @@ ActiveRecord::Schema.define(version: 20131114074341) do
     t.string   "video_link"
     t.datetime "made_at"
     t.string   "website_link"
-    t.string   "project_thumbnail"
-    t.string   "project_big"
+    t.text     "project_thumbnail"
+    t.text     "project_big"
+    t.text     "images"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -43,7 +53,7 @@ ActiveRecord::Schema.define(version: 20131114074341) do
     t.datetime "updated_at"
   end
 
-  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true
+  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
 
 end

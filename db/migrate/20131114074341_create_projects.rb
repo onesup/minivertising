@@ -9,9 +9,9 @@ class CreateProjects < ActiveRecord::Migration
       t.string :video_link
       t.datetime :made_at
       t.string :website_link
-      t.string :project_thumbnail
-      t.string :project_big
-
+      t.text :project_thumbnail
+      t.text :project_big
+      t.text :images
       t.timestamps
     end
   end

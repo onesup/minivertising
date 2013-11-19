@@ -18,3 +18,6 @@
 //= require DT_bootstrap
 //= require bootstrap.min
 //= require scripts
+//= require jquery.ui.widget
+//= require jquery.iframe-transport
+//= require jquery.fileupload

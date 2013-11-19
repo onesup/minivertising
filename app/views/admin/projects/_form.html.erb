@@ -1,3 +1,19 @@
+<script>
+$(function () {
+  $('#big_image').fileupload({
+    dataType: 'json',
+    add: function (e, data) {
+      data.context = $('<p/>').text('Uploading...').appendTo(document.body);
+      data.submit();
+    },
+    done: function (e, data) {
+    $.each(data.result.files, function (index, file) {
+        $('<p/>').text(file.name).appendTo("#project_big");
+      });
+    }
+  });
+});
+</script>
 <%= simple_form_for([:admin, @project]) do |f| %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
@@ -26,25 +42,27 @@
                           <%= image_tag @project.project_thumbnail unless @project.project_thumbnail.nil? %>
                         </div>
                         <div class="controls">
-                          <div class="uploader hover" id="uniform-fileInput">
+                          <div class="uploader hover" id="project_thumbnail">
                             <%= f.file_field :project_thumbnail %>
                           </div>
                           <span class="help-inline">메인페이지 표시.</span>
                         </div>
                       </div>
-                      <div class="control-group">
-                        <label class="control-label">원래크기(1170x615)</label>
-                        <div>
-                          <%= image_tag @project.project_big unless @project.project_big.nil? %>
-                        </div>
-                        <div class="controls">
-                          <div class="uploader hover" id="uniform-fileInput">
-                            <%= f.file_field :project_big %>
+                      <%= f.fields_for :project_pictures do |project_picture| %>
+                        <div class="control-group">
+                          <label class="control-label">원래크기(1170x615)</label>
+                          <div>
+                            <%= image_tag @project.project_big unless @project.project_big.nil? %>
                           </div>
-                          <span class="help-inline">메인페이지 표시.</span>
+                          <div class="controls">
+                            <div class="uploader hover" id="project_big">
+                                <%= project_picture.file_field :project_big, id: "big_image", :multiple => true, "data-url" => image_upload_projects_path(:json) %>
+                                <p></p>
+                            </div>
+                            <span class="help-inline">메인페이지 표시.</span>
+                          </div>
                         </div>
-                      </div>
-                      
+                        <% end %>
                       <div class="control-group">
                         <label class="control-label" for="focusedInput">제목</label>
                         <div class="controls">
