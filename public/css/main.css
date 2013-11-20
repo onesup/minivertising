@@ -31,11 +31,12 @@
 @import url("font-awesome.min.css");
 @import url(http: //fonts.googleapis.com/css?family=Source+Sans+Pro: 300,400,600,700,900);
 @import url(http: //fonts.googleapis.com/css?family=Oswald: 400,300,700);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400,600,700,800);
 
 body {
 	margin: 0;
 	padding: 0;
-	font-family:  "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-family: 'Open Sans', "Source Sans Pro", Helvetica, Arial, sans-serif;
 	font-size:  13px;
 	font-weight: 400;
 	color: #FFF;
@@ -47,7 +48,7 @@ body {
 	position: fixed;
 	width: 100%;
 	height: 100%;
-	background-color: #ffeb00;
+	background-color: #fff;
 	z-index: 9999999;
 	overflow: hidden;
 }
@@ -56,6 +57,7 @@ body {
 	width: 100%;
 	height: auto;
 }
+
 
 .animated-area {
 	overflow: hidden;
@@ -74,7 +76,7 @@ body {
 }
 
 .font-Oswald {
-	font-family:  "Oswald", sans-serif;
+	font-family:  "Open Sans", sans-serif;
 }
 
 .color-text {
@@ -86,15 +88,15 @@ body {
 }
 
 .sect-titles {
-	font-size: 80px;
+	font-size: 40px;
 	color: #000;
-	font-weight: 700;
+	font-weight: 300;
 }
 
 .sect-mini-titles {
 	font-size: 30px;
 	color: #000;
-	font-weight: 600;
+	font-weight: 300;
 }
 
 .divide {
