@@ -1,10 +1,7 @@
 full_url = URI( root_url )
 full_url.path = @picture.project_big.url
-# Or maybe you want a link to some asset, like I did:
-# full_url.path = image_path("whatevar.jpg")
-full_url.to_s
-
-pictures = [@picture]
+pictures = [@picture] # https://github.com/blueimp/jQuery-File-Upload/wiki/Setup
+json.project_picture @picture.id
 json.files do
   json.array! pictures do |picture|
     json.name picture.project_big.filename
