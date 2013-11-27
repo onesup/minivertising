@@ -232,18 +232,19 @@ body {
 }
 
 .intro {
-	background: url(../temp/bg1.jpg) fixed;
+	background: url(/img/temp/bg1.jpg) fixed;
 	background-size: cover;
 	background-size: 100%;
 	background-position: center top;
 }
 
 .intro.white {
-	
+
+	background: url(/img/temp/wbg.jpg) fixed;
 }
 
 .form-intro {
-	background: url(../temp/bg2.jpg) fixed;
+	background: url(/img/temp/bg2.jpg) fixed;
 	background-size: cover;
 	background-position: center top;
 }
@@ -264,7 +265,7 @@ body {
 
 #services {
 	height: auto;
-	background: #777777 url(../temp/sbg.jpg) repeat top center;
+	background: #777777 url(/img/temp/sbg.jpg) repeat top center;
 	text-align: center;
 	color: #fff;
 }
@@ -391,7 +392,7 @@ body {
 	width:  11px;
 	 height:  12px;
 	 display:  block;
-	 background: url(../img/flex-control.png) 0 -12px;
+	 background: url(/img/flex-control.png) 0 -12px;
 	cursor:  pointer;
 	text-indent:  -9999px;
 	-webkit-border-radius: 0px;
@@ -405,13 +406,13 @@ body {
 }
 
 #slider .flex-control-paging li a:hover  {
-	background: url(../img/flex-control.png) 0 -12px;
+	background: url(/img/flex-control.png) 0 -12px;
 }
 
 #slider .flex-control-paging li a.flex-active  {
 	width: 11px;
 	height: 12px;
-	background: url(../img/flex-control.png) 0 0;
+	background: url(/img/flex-control.png) 0 0;
 	 cursor:  default;
 }
 
@@ -681,7 +682,7 @@ body {
 }
 
 .about-parallax {
-	background:  url(../temp/prllx1.jpg) 50% 0 repeat fixed;
+	background:  url(/img/temp/prllx1.jpg) 50% 0 repeat fixed;
 }
 
 .qtext {
@@ -1093,7 +1094,7 @@ body {
 }
 
 .clients-parallax {
-	background:  url(../temp/prllx2.jpg) 50% 0 repeat fixed;
+	background:  url(/img/temp/prllx2.jpg) 50% 0 repeat fixed;
 }
 
 .clients-parallax h1 {
@@ -1332,7 +1333,7 @@ body {
 }
 
 .comment-parallax {
-	background:  url(../temp/prllx3.jpg) 50% 0 repeat fixed;
+	background:  url(/img/temp/prllx3.jpg) 50% 0 repeat fixed;
 	padding: 160px 0 140px 0;
 }
 
@@ -1587,17 +1588,17 @@ body {
 }
 
 .inptname {
-	background: url(../img/cname-icon.png) no-repeat 345px center;
+	background: url(/img/cname-icon.png) no-repeat 345px center;
 	outline: none;
 }
 
 .inptcom {
-	background: url(../img/ccom-icon.png) no-repeat 345px center;
+	background: url(/img/ccom-icon.png) no-repeat 345px center;
 	outline: none;
 }
 
 .inptmail {
-	background: url(../img/cmail-icon.png) no-repeat 345px center;
+	background: url(/img/cmail-icon.png) no-repeat 345px center;
 	outline: none;
 }
 

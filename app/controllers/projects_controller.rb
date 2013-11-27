@@ -1,6 +1,14 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
+  def image_upload
+    project_picture = params["project"]["project_pictures_attributes"]["0"]["project_big"].first
+    @picture = ProjectPicture.new
+    @picture.project_big = project_picture
+    @picture.save
+    @picture
+  end
+  
   # GET /projects
   # GET /projects.json
   def index
@@ -14,7 +22,7 @@ class ProjectsController < ApplicationController
 
   # GET /projects/new
   def new
-    @project = Project.new
+    @project = Project.create
   end
 
   # GET /projects/1/edit
@@ -69,6 +77,6 @@ class ProjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
-      params.require(:project).permit(:title, :sub_title, :description, :category, :client, :made_at, :link, :project_image)
+      params.require(:project).permit!
     end
 end

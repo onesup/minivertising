@@ -2,13 +2,6 @@
     <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
 <![endif]-->
 
-<div id="loading-area" style="display:none;">
-	<div class="block">
-	  <div class="initial">
-	    <span>M</span>
-	  </div>
-	</div>
-</div>
 <div id="wrapper">
 	<!-- NAVIGATION -->
 	<div id="menu-alt-wrapper">
@@ -21,8 +14,8 @@
 					<ul id="nav" class="nav-collapse">
 						<li class="current"><a href="#home">HOME</a></li>
 						<li><a href="#about">ABOUT</a></li>
+						<li><a href="#services">SERVICE</a></li>
 						<li><a href="#portfolio">PORTFOLIO</a></li>
-						<li><a href="#services">SERVICES</a></li>
 						<li><a href="#contact">CONTACT</a></li>
 					</ul>
 				</div>
@@ -43,9 +36,9 @@
 			</div>
 			<div id="slider" class="margint50 font-Oswald flexslider" style="display:none;">
 				<ul class="slides">
-					<li>THE FUNCTION OF DESIGN IS LETTING <span class="color-text">DESIGN</span> FUNCTION</li>
-					<li>ART DOES NOT <span class="color-text">REPRODUCE</span> WHAT WE SEE RATHER</li>
-					<li>ONCE YOU ELIMINATE QUALITY AS A <span class="color-text">PROCESS</span></li>
+					<li>안녕하세요<span class="color-text">반갑습니다</span> 컬러펑션</li>
+					<li>이원섭<span class="colo r-text">노란칼라</span> WHAT WE SEE RATHER</li>
+					<li>우하하하<span class="color-text">PROCESS</span></li>
 				</ul>
 			</div>
 			<div class="scroll-down"><a href="#about" class="smooth"><i class="icon-chevron-sign-down"></i></a></div>
@@ -127,16 +120,7 @@
 			<p class="qname color-text">DAVID LEGGETT</p>
 		</div>
 	</div>
-	<!-- PORTFOLIO -->
-	<div id="portfolio" class="alt-portfolio">
-		<h1 class="sect-titles font-Oswald padt60">PORTFOLIO</h1>
-		<p class="info margint30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ratione harum commodi eum aperiam accusantium quaerat eius iure ut cupiditate esse atque molestias mollitia sit vero animi ipsa quo odio?</p>
-		<div class="work-list margint60 padb60">
-			<ul class="clearfix">
-        <%= render partial: "project", collection: @projects %>
-			</ul>
-		</div>
-	</div>
+
 	<!-- SERVICES -->
 	<div id="services">
 		<h1 class="sect-titles font-Oswald padt60 color-white">SERVICES</h1>
@@ -206,6 +190,17 @@
 			</div>
 		</div>
 	</div>
+	<!-- PORTFOLIO -->
+	<div id="portfolio" class="alt-portfolio">
+		<h1 class="sect-titles font-Oswald padt60">PORTFOLIO</h1>
+		<div class="divide margint40">x</div>
+		<p class="info margint30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ratione harum commodi eum aperiam accusantium quaerat eius iure ut cupiditate esse atque molestias mollitia sit vero animi ipsa quo odio?</p>
+		<div class="work-list margint60 padb60">
+			<ul class="clearfix">
+        <%= render partial: "project", collection: @projects %>
+			</ul>
+		</div>
+	</div>
 	<!-- TEAM -->
   <!-- BLOG -->
 	<!-- FEATURES -->
@@ -213,16 +208,6 @@
 	<div id="contact">
 		<h1 class="sect-titles font-Oswald padt60">CONTACT</h1>
 		<p class="info margint30">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem ratione harum commodi eum aperiam accusantium quaerat eius iure ut cupiditate esse atque molestias mollitia sit vero animi ipsa quo odio?</p>
-    <!-- <ul class="social-icons margint50">
-      <li><a href="#"><i class="icon-facebook"></i></a></li>
-      <li><a href="#"><i class="icon-twitter"></i></a></li>
-      <li><a href="#"><i class="icon-google-plus"></i></a></li>
-      <li><a href="#"><i class="icon-skype"></i></a></li>
-      <li><a href="#"><i class="icon-flickr"></i></a></li>
-      <li><a href="#"><i class="icon-pinterest"></i></a></li>
-      <li><a href="#"><i class="icon-foursquare"></i></a></li>
-      <li><a href="#"><i class="icon-youtube"></i></a></li>
-    </ul> -->
 		<div class="container padb60">
 			<div class="row margint50 contact-area">
 				<div class="col-lg-4 col-sm-6">
@@ -283,7 +268,6 @@
 </div>
 
 <!-- JS FILES -->
-<script src="/js/vendor/jquery-1.10.1.min.js"></script>
 <script src="/js/vendor/bootstrap.min.js"></script>
 <script src="/js/jquery.queryloader2.min.js"></script>
 <script src="/js/smoothscroll.js"></script>

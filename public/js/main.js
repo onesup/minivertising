@@ -64,53 +64,20 @@ var ScrolleServicesHover = function(){
 /* Services Hover */
 /* Carousels */
 var ScrolleCarousels = function(){
-$("#comment-list").carouFredSel({
-	responsive: true,
-	scroll: 1,
-	items: 1,
-	auto: true,
-	prev: '#cprev',
-	next: '#cnext',
-	swipe: {
-		onTouch: true
-	},
-	pagination: "#bullets"	
-});
 }
 /* Carousels */
 /* Team Carousel */
 var ScrolleTeamCarousel = function(){
-var prep,appe;
-var wi = $(window).width();
-if (wi <= 1200){
-	prep = 3;
-	appe = 3;
-}
-else {
-	prep = 2;
-	appe = 2;
-}
-
-var $car = $('#team-list');
-for ( var a = 0; a < prep; a++ ) {
-	$car.prepend( '<li class="emptyl">' );
-}
-for ( var a = 0; a < appe; a++ ) {
-	$car.append( '<li class="emptyr">' );
-}
-$car.carouFredSel({
-	circular: false,
-	infinite: false,
-	width: '100%',
-	items: 7,
-	prev: '#prev',
-	next: '#next',
-		auto: false,
-		scroll: {
-			items: 1,
-			duration: 1000
-		}
-});
+  var prep,appe;
+  var wi = $(window).width();
+  if (wi <= 1200){
+  	prep = 3;
+  	appe = 3;
+  }
+  else {
+  	prep = 2;
+  	appe = 2;
+  }
 }
 /* Team Carousel */
 /* LightBox */
@@ -121,13 +88,6 @@ var ScrolleLightBox = function(){
 /* LightBox */
 /* TwitterFeed */
 var ScrolleTwitter = function(){
-	$('.twitterfeed').tweet({
-	    modpath: 'js/twitter/',
-	    count: 3,
-	    avatar_size: 50,
-	    loading_text: 'loading twitter feed',
-	    username:'2035themes'
-	});
 }
 /* TwitterFeed */
 /* Sliders */
@@ -219,25 +179,24 @@ var LoadingCountdown = function(){
 var ScrolleGmap = function(){
 	var map = new GMaps({
 		el: '#map',
-		lat: 40.783435,
-		lng: -73.966249
+    zoom: 15,
+		lat: 37.4887018,
+		lng: 126.9891373
 	});
+  // map.setCenter();
 	map.addMarker({
-	    lat: 40.784076,
-	    lng: -73.966332,
+	    lat: 37.4887018,
+	    lng: 126.9891373,
 	    icon: "img/mapicon.png",
-	    title: 'Marker with InfoWindow',
+	    title: '미니버타이징',
 		infoWindow: {
-	  		content: '<p>Central Park</p>'
+	  		content: '<p>미니버타이징</p><p>내방역12번출구</p>'
 	    }
 	});
 }
 /* Google map */
 
 $(document).ready(function() {
-
-$("body").queryLoader2();
-LoadingCountdown();
 
 /* Resize Events */
 $(window).bind('resize',function() {
@@ -280,10 +239,11 @@ ScrolleTeamCarousel();
 ScrolleGmap();
 
 });
-$(window).load(function(){
-$('#loading-area').fadeOut().remove();
-});
+
+
 })(jQuery);
+
+
 /* Read More */
 $(function(){
 var $el, $ps, $up, totalHeight;
