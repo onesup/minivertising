@@ -15,15 +15,15 @@ end
 
 gem 'mysql2'
 gem 'unicorn'
-gem 'paloma'
+# gem 'paloma'
 gem 'carrierwave'
 # gem 'carrierwave-serializable'
 gem 'devise', '~> 3.1.0'
-gem 'the_role', '~> 2.1.0'
-gem 'bootstrap-sass', '~> 2.3.2.2'
+# gem 'the_role', '~> 2.1.0'
+# gem 'bootstrap-sass', '~> 2.3.2.2'
 gem 'omniauth'
 gem 'omniauth-facebook', '~> 1.4.1'
-gem 'kaminari'
+# gem 'kaminari'
 
 # for Rails 4.0
 gem 'simple_form', github: 'plataformatec/simple_form', tag: 'v3.0.0.beta1'
@@ -36,7 +36,7 @@ group :development do
   gem "pry"
   gem 'capistrano', '~> 2.15.4'
   gem 'guard-rails'
-  gem "rack-livereload", :group => :development
+  # gem "rack-livereload", :group => :development
 end
 
 group :test do
