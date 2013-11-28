@@ -271,7 +271,7 @@ body {
 #services {
 	height: auto;
 	background: #777777 url(/img/temp/sbg.jpg) repeat top center;
-	background:#fff;
+	background:rgba(255,255,255,0.5); 
 	text-align: center;
 	color: #555;
 }
@@ -1485,6 +1485,14 @@ body {
 
 .contact-area {
 	text-align: left;
+}
+
+ul.contact_detail{
+	padding-top:20px;
+	border-top:3px solid #222;
+}
+ul.contact_detail li{
+	padding:5px 0;
 }
 
 .contact-tab li {
