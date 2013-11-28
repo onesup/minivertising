@@ -1,6 +1,7 @@
 full_url = URI( root_url )
 full_url.path = @picture.project_big.url
 pictures = [@picture] # https://github.com/blueimp/jQuery-File-Upload/wiki/Setup
+json.project_id @project_id
 json.project_picture @picture.id
 json.files do
   json.array! pictures do |picture|

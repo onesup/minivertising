@@ -13,7 +13,7 @@ Minivertising::Application.routes.draw do
     end
     collection do
       post 'upload', to: :create
-      patch 'image_upload', to: :image_upload
+      post 'image_upload', to: :image_upload
     end
   end
   

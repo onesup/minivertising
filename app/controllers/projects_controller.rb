@@ -2,8 +2,10 @@ class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :edit, :update, :destroy]
 
   def image_upload
-    project_picture = params["project"]["project_pictures_attributes"]["0"]["project_big"].first
+    project_picture = params["project_big"]
+    project = Project.find(params["project_id"])
     @picture = ProjectPicture.new
+    @picture.project = project
     @picture.project_big = project_picture
     @picture.save
     @picture
