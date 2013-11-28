@@ -4,5 +4,12 @@ d = "모든 국민은 법률이 정하는 바에 의하여 국가기관에 문�
 clients.each do |client|
   p = Project.create!(title: client+" 프로젝트", category: "바이럴 영상", description: d, 
     client: client, made_at: Time.now, website_link: "http://www.minivertising.kr")
+  pic1 = ProjectPicture.new
+  pic2 = ProjectPicture.new
+  pic1.project_big = open(Rails.root.to_s + "/public/img/sunset.jpg")
+  pic2.project_big = open(Rails.root.to_s + "/public/img/Rockwell_Norman-Going_and_Coming.jpg")
+  pic1.save
+  pic2.save
+  p.project_pictures << [pic1, pic2]
   puts p.title
 end

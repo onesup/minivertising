@@ -729,7 +729,7 @@ GMaps.prototype.drawOverlay = function(options) {
         google.maps.event.addDomListener(object, name, function(e){
           if (navigator.userAgent.toLowerCase().indexOf('msie') != -1 && document.all) {
             e.cancelBubble = true;
-            e.returnValue = false;
+            e.preventDefault() = false;
           }
           else {
             e.stopPropagation();
