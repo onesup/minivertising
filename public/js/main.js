@@ -11,7 +11,7 @@ var ScrolleMenuHover = function(){
 	var winWidth = $(window).width();
 	$('.work-list').css('width',winWidth-60);
 	$('.alt-portfolio .work-list').css('width',winWidth);
-	if(winWidth > 1279){
+	if(winWidth > 959){
 		$('#nav li.sectionLink').hover(function(){
 			$(this).stop().animate({'width':'160px'});		
 		},function(){
