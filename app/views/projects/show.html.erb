@@ -5,9 +5,11 @@
 		<div class="project-slider margint20">
       <div class="slider-wrapper theme-default">
         <div id="project-slider-wrapper" class="nivoSlider">
-          <%= image_tag @project.project_big.url, class: "img-responsive"%>
-          <%= image_tag @project.project_big.url, class: "img-responsive"%>
-          <%= image_tag @project.project_big.url, class: "img-responsive"%>
+          <% unless @project.project_pictures.empty? %>
+            <% @project.project_pictures.each do |picture| %>
+              <%= image_tag @project.project_pictures.project_big.url, class: "img-responsive" %>
+            <% end %>
+          <% end %>
         </div>
       </div>
 		</div>
