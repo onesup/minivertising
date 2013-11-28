@@ -32,11 +32,12 @@
 @import url(http: //fonts.googleapis.com/css?family=Source+Sans+Pro: 300,400,600,700,900);
 @import url(http: //fonts.googleapis.com/css?family=Oswald: 400,300,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,300,400,600,700,800);
+@import url(http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,300,700);
 
 body {
 	margin: 0;
 	padding: 0;
-	font-family: 'Open Sans', "Source Sans Pro", Helvetica, Arial, sans-serif;
+	font-family: 'Roboto Condensed', "Source Sans Pro", Helvetica, Arial, sans-serif;
 	font-size:  13px;
 	font-weight: 400;
 	color: #FFF;
@@ -76,7 +77,7 @@ body {
 }
 
 .font-Oswald {
-	font-family:  "Open Sans", sans-serif;
+	font-family:  "Roboto Condensed", sans-serif;
 }
 
 .color-text {
@@ -88,7 +89,7 @@ body {
 }
 
 .sect-titles {
-	font-size: 50px;
+	font-size: 40px;
 	color: #000;
 	font-weight: 300;
 }
@@ -301,9 +302,10 @@ body {
 
 #footer {
 	height: 160px;
-	background: #000;
+	background: #333;
 	text-align: center;
-	color: #ffeb00;
+	color: #fff;
+	padding-top:20px;
 }
 
 .scroll-down {
@@ -686,6 +688,10 @@ body {
 	background:  url(/img/temp/prllx1.jpg) 50% 0 repeat fixed;
 }
 
+.service-parallax {
+	background:  url(/img/temp/prllx2.jpg) 50% 0 repeat fixed;
+}
+
 .qtext {
 	max-width: 1030px;
 	margin: 0 auto;
@@ -741,7 +747,7 @@ body {
 }
 
 .work-list ul li .mask {
-	padding-top: 50px;
+	padding-top: 80px;
 	width: 100%;
 	height:  100%;
 	position:  absolute;
@@ -777,7 +783,7 @@ body {
 }
 
 .work-list ul li .mask h2 {
-	font-size: 30px;
+	font-size: 20px;
 	font-weight: 400;
 }
 
