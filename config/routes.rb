@@ -1,6 +1,4 @@
 Minivertising::Application.routes.draw do
-  get "project_pictures/create"
-  get "project_pictures/update"
   get "construction/index"
   get 'home', to: 'home#index'
   get 'test', to: 'home#test'
@@ -20,6 +18,8 @@ Minivertising::Application.routes.draw do
   resources :projects do
     resources :project_pictures
   end
+  
+  resources :project_pictures
   
   devise_for :users
   namespace :admin do
