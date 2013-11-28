@@ -6,8 +6,8 @@ clients.each do |client|
     client: client, made_at: Time.now, website_link: "http://www.minivertising.kr")
   pic1 = ProjectPicture.new
   pic2 = ProjectPicture.new
-  pic1.project_big = open(Rails.root.to_s + "/public/img/sunset.jpg")
-  pic2.project_big = open(Rails.root.to_s + "/public/img/Rockwell_Norman-Going_and_Coming.jpg")
+  pic1.project_big = open(Rails.root.to_s + "/app/assets/images/sunset.jpg")
+  pic2.project_big = open(Rails.root.to_s + "/app/assets/images/Rockwell_Norman-Going_and_Coming.jpg")
   pic1.save
   pic2.save
   p.project_pictures << [pic1, pic2]
