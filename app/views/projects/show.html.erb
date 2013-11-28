@@ -7,7 +7,7 @@
         <div id="project-slider-wrapper" class="nivoSlider">
           <% unless @project.project_pictures.empty? %>
             <% @project.project_pictures.each do |picture| %>
-              <%= image_tag @project.project_pictures.project_big.url, class: "img-responsive" %>
+              <%= image_tag picture.project_big.url, class: "img-responsive" %>
             <% end %>
           <% end %>
         </div>
@@ -31,15 +31,19 @@
 					</li>
 					<li class="clearfix">
 						<div class="pull-left list-title">DATE</div>
-						<div class="pull-right list-desc"><%= @project.made_at.strftime("%Y. %m") %></div>
+						<div class="pull-right list-desc">
+              <%= @project.made_at.strftime("%Y. %m") unless @project.made_at.nil? %>
+            </div>
 					</li>
 				</ul>
 			</div>
 			<div class="col-lg-4">
 				<h3 class="font-Oswald">PROJECT WEBSITE</h3>
 				<!-- <p class="margint20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem.</p> -->
-        <%= link_to @project.website_link do %>
-          <%= @project.website_link.html_safe %>&nbsp<i class="icon-external-link"></i>
+        <% unless @project.website_link.nil? %>
+          <%= link_to @project.website_link do %>
+            <%= @project.website_link.html_safe %>&nbsp<i class="icon-external-link"></i>
+          <% end %>
         <% end %>
 			</div>
 		</div>
