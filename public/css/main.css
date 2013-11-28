@@ -238,6 +238,7 @@ body {
 
 .intro {
 	background: url(/img/temp/bg1.jpg) fixed;
+	background:#222;
 	background-size: cover;
 	background-size: 100%;
 	background-position: center top;
@@ -246,6 +247,12 @@ body {
 .intro.white {
 
 	background: url(/img/temp/wbg.jpg) fixed;
+}
+
+.intro_text{
+	font-size:40px;
+	padding-top:400px;
+	
 }
 
 .form-intro {
@@ -318,7 +325,7 @@ body {
 	height: 50px;
 	bottom: 60px;
 	left: 50%;
-	margin-left: -10px;
+	margin-left: -25px;
 	transition: all 0.5s ease-in-out;
 	-webkit-transition:  all 0.5s ease-in-out;
 }
@@ -699,7 +706,7 @@ body {
 .qtext {
 	max-width: 1030px;
 	margin: 0 auto;
-	padding: 160px 0 ;
+	padding: 100px 0 ;
 	font-size: 50px;
 	font-weight: 700;
 	color: #fff;
@@ -710,6 +717,16 @@ body {
 	margin: 0;
 	padding: 20px 0 160px 0;
 	font-weight: 700;
+}
+
+.about_subtitle{
+	font-size:20px;
+	font-weight:400;
+}
+
+#about .container{
+	padding-bottom:80px;
+	text-align:left;
 }
 
 /* ABOUT SECTION */
