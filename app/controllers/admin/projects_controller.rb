@@ -10,8 +10,8 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.create
-    @project_picture = @project.project_pictures.create
+    @project = Project.new
+    @project_picture = @project.project_pictures.build
   end
   
   def edit
