@@ -43,9 +43,8 @@
 	</div>
 	<!-- ABOUT -->
 	<div id="about">
-		<div class="about-parallax font-Oswald">
-			<h1 class="qtext sect-titles ">ABOUT</h1>
-		</div>		
+	
+		<h1 class="sect-titles font-Oswald padt60">ABOUT</h1>
 		<div class="container margint60">
 			<div class="row col-sm-6">
 				<h3>WHY MINIVERTISING?</h3>
@@ -70,13 +69,21 @@
 					그렇다면 우리의 광고는 더이상 광고로 머물러선 안됩니다.</p>
 			</div>		
 		</div>
+		<div class="about-parallax font-Oswald">
+			<div class="container margint70">
+				<p class="qtext">
+					MINI IS BIG. <br>
+					MINI IS ORIGIAL. <br>
+					MINI IS FUN.
+				</p>
+				
+			</div>
+		</div>		
 
 	</div>
 	<!-- SERVICES -->
-	<div id="services">
-		<div class="service-parallax font-Oswald">
-			<h1 class="qtext sect-titles ">SERVICE</h1>
-		</div>	
+	<div id="services">	
+		<h1 class="sect-titles font-Oswald padt60">SERVICE</h1>
 		<p class="sub_title">디자인 제작과 PD프러덕션 서비스를 통합해 <br>커뮤니케이션 기획부터 최종 제작까지 토탈서비스를 제공합니다.</p>
 
 		<div class="container margint70">
@@ -138,7 +145,6 @@
 	<!-- PORTFOLIO -->
 	<div id="portfolio" class="alt-portfolio">
 		<h1 class="sect-titles font-Oswald padt60">WORK</h1>
-		<p class="info margint30">-</p>
 		<div class="work-list margint60 padb60">
 			<ul class="clearfix">
         <%= render partial: "project", collection: @projects %>
@@ -154,7 +160,7 @@
 
 		<div class="container padb60">
 			
-			<div id="map"></div>
+			<div id="map" class="maps"></div>
 			
 			<div class="row margint50 contact-area">
 				<div class="col-lg-4 col-sm-6">

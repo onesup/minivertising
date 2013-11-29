@@ -1503,6 +1503,9 @@ body {
 .contact-area {
 	text-align: left;
 }
+#contact .sect-titles{
+	padding-bottom:50px;
+}
 
 ul.contact_detail{
 	padding-top:20px;
