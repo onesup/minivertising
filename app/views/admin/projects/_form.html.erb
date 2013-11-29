@@ -1,5 +1,8 @@
 <script>
 $(function () {
+  $('.project_picture_destroy').bind('ajax:complete', function() {
+    $(this).parent().parent().hide();
+  });
   $('#big_image').fileupload({
     dataType: 'json',
     add: function (e, data) {
@@ -17,7 +20,7 @@ $(function () {
 });
 </script>
 <%= simple_form_for([:admin, @project]) do |f| %>
-  <%= f.hidden_field :project_id, :value => @project.id, id: "project_id" %>
+  <%= hidden_field_tag :project_id, :value => @project.id, id: "project_id" %>
   <% if @project.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
@@ -51,18 +54,27 @@ $(function () {
                           <span class="help-inline">리스트의 썸네일 표시.</span>
                         </div>
                       </div>
-                      <%#= f.fields_for :project_pictures do |project_picture| %>
                         <div class="control-group">
                           <label class="control-label">원래크기(1170x615)</label>
-                          <div>
-                            <%= image_tag @project.project_big unless @project.project_big.nil? %>
-                          </div>
+                          <% @project.project_pictures.each do |picture| %>
+                            <div class="project_big_thumb" picture-id="<%= picture.id %>">
+                              <p>
+                                <%= image_tag picture.project_big.url(:thumb) %>
+                              </p>
+                              <p>
+                                <%= 
+                                  link_to 'Destroy', picture, remote: :true, method: :delete, 
+                                    class: "project_picture_destroy", data: { confirm: '레알 삭제?' } 
+                                  %>
+                              </p>
+                            </div>
+                          <% end %>
                           <div class="controls">
                             <div class="uploader hover" id="project_big">
                               <%= file_field_tag :project_big, id: "big_image", :multiple => true, "data-url" => image_upload_projects_path(:json) %>
                               <p></p>
                             </div>
-                            <span class="help-inline">메인페이지 표시.</span>
+                            <span class="help-inline">메인페이지 표시. (복수 이미지 업로드 가능)</span>
                           </div>
                         </div>
                         <%# end %>

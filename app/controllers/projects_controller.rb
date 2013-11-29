@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
 
   def image_upload
     project_picture = params["project_big"]
-    project = Project.find(params["project_id"])
+    project = Project.find(eval(params["project_id"])[:value])
     @picture = ProjectPicture.new
     @picture.project = project
     @picture.project_big = project_picture
@@ -64,11 +64,8 @@ class ProjectsController < ApplicationController
   # DELETE /projects/1
   # DELETE /projects/1.json
   def destroy
+    render nothing: true
     @project.destroy
-    respond_to do |format|
-      format.html { redirect_to projects_url }
-      format.json { head :no_content }
-    end
   end
 
   private
