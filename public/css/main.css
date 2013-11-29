@@ -250,9 +250,9 @@ body {
 }
 
 .intro_text{
-	font-size:40px;
+	font-size:50px;
 	padding-top:400px;
-	
+	font-weight:400;
 }
 
 .form-intro {
