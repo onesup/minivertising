@@ -1,16 +1,4 @@
 @media screen and (max-width:959px) {
-  #menu{position:relative;width:100%;}
-  #menu-alt-wrapper{position:relative;width:100%;height:0;background:transparent;}
-  #menu-alt-wrapper .container{max-width:100% !important;padding:0;}
-  .h-logo{display:none;}
-  .menu-alt{float:none !important;}
-  .nav-collapse.opened{max-height:9999px;}
-  .nav-toggle{position:absolute;top:0px;left:50%;margin-left:-89px;width:178px;height:45px;text-indent:-9999px;overflow:hidden;display:block;background:#f43c12;background:url(../img/mobile-nav-icon.png) #000 no-repeat center center;}
-  .js .nav-collapse{max-height:0;position:absolute;display:block;overflow:hidden;}
-  #nav li.sectionLink{width:100%;}
-  #nav li.sectionLink a span{font-size:16px;}
-  #menu-alt-wrapper #nav li{float:none;width:100%;background-color:#020402;border-bottom:1px solid #1f1f1f;padding-left:25px;padding-bottom:20px;}
-  #menu-alt-wrapper.menu-white #nav li a{color:#FFF;}
   [class*="col-"]{padding-top:15px;padding-bottom:15px;}
   .qtext{padding:50px 5% 0 5%;}
   .qname{padding-bottom:50px;}
@@ -25,7 +13,7 @@
   .contact-form-area textarea{width:470px !important;}
 }
 
-@media only screen and (max-width: 991px) {
+@media only screen and (max-width: 959px) {
   .contact-form-area input{width:350px !important;}
   .contact-form-area textarea{width:360px !important;}
   .inptname{background:url(../img/cname-icon.png) no-repeat 325px center;}
@@ -38,6 +26,19 @@
 }
 
 @media only screen and (max-width: 767px) {
+  #menu{position:relative;width:100%;}
+  #menu-alt-wrapper{position:relative;width:100%;height:0;background:transparent;}
+  #menu-alt-wrapper .container{max-width:100% !important;padding:0;}
+  .h-logo{display:none;}
+  .menu-alt{float:none !important;}
+  .nav-collapse.opened{max-height:9999px;}
+  .nav-toggle{position:absolute;top:0px;left:50%;margin-left:-89px;width:178px;height:45px;text-indent:-9999px;overflow:hidden;display:block;background:#f43c12;background:url(../img/mobile-nav-icon.png) #000 no-repeat center center;}
+  .js .nav-collapse{max-height:0;position:absolute;display:block;overflow:hidden;}
+  #nav li.sectionLink{width:100%;}
+  #nav li.sectionLink a span{font-size:16px;}
+  #menu-alt-wrapper #nav li{float:none;width:100%;background-color:#020402;border-bottom:1px solid #1f1f1f;padding-left:25px;padding-bottom:20px;}
+  #menu-alt-wrapper.menu-white #nav li a{color:#FFF;}
+  
   .work-list ul li{width:100%;}
   #client-list{margin-left:50px;}
   .blg-content-box{width:100% !important;height:auto !important;}
@@ -52,7 +53,7 @@
 }
 
 /* Tablet Portrait size to Tablet Landscape (devices and browsers) */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
+@media only screen and (min-width: 768px) and (max-width: 959px) {
 
 }
 
