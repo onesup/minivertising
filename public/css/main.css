@@ -314,11 +314,9 @@ body {
 }
 
 #footer {
-	height: 160px;
 	background: #333;
 	text-align: center;
-	color: #fff;
-	padding-top:20px;
+	color: #eee;
 }
 
 .scroll-down {
@@ -1678,8 +1676,11 @@ a.submit-button:hover {
   color: #000;
 }
 #footer h5 {
-	font-size: 12px;
-	font-weight: 400;
+	font-size: 30px;
+	font-weight: 700;
+	color:#555;
+	background:#111;
+	padding:40px 0;
 }
 
 /* CONTACT SECTION */
