@@ -149,7 +149,9 @@ var ScrolleAnimation = function(){
 /* Animation Finish */
 /* Navigation */
 var ScrolleNavigation = function(){
-	var nav = responsiveNav("#nav");
+	var nav = responsiveNav("#nav",{
+	  label: "<img src='/img/m.png'/>"
+	});
 	$('#nav').onePageNav({
 		scrollSpeed: 600,
 		scrollOffset: 0

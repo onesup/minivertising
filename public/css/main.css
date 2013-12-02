@@ -1662,7 +1662,10 @@ ul.contact_detail li{
 }
 
 .submit-button {
+  color: #000;
+  text-decoration: none;
 	width: 130px !important;
+  padding: 10px 10px;
 	height: 40px;
 	background-color: #ffeb00;
 	font-weight: 700;
@@ -1670,7 +1673,10 @@ ul.contact_detail li{
 	outline: 0 !important;
 	margin-right: -10px;
 }
-
+a.submit-button:hover {
+  text-decoration: none;
+  color: #000;
+}
 #footer h5 {
 	font-size: 12px;
 	font-weight: 400;

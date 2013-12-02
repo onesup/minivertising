@@ -3,7 +3,7 @@ class HomeController < ApplicationController
     @projects = Project.order("created_at desc").limit(8)
   end
 
-  def test
+  def contact
     @projects = Project.order("created_at desc").limit(8)
   end
 end
