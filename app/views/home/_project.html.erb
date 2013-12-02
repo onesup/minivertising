@@ -1,6 +1,6 @@
 <li>
   <%= link_to project_path(project.id), class: "iframe portfolio-group cboxElement", title: "" do %>
-    <%= image_tag project.project_thumbnail, class: "img-responsive"%>
+    <%= image_tag project.project_thumbnail.url, class: "img-responsive"%>
 		<div class="mask">
 			<h2 class="font-Oswald"><%= project.title %></h2>
 		</div>

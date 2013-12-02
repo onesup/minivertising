@@ -59,10 +59,18 @@
 	var projectWinH = $(window).height();
 	$('.projects').css('height',projectWinH+10);
 	$("html").niceScroll();
-	$('#project-slider-wrapper').nivoSlider({
-		effect: 'fade',
-		controlNav: false
-	});
-  
+  var width = $(window).width();
+  if (width > 767){
+  	$('#project-slider-wrapper').nivoSlider({
+  		effect: 'fade',
+  		controlNav: false
+  	});
+    $('.img-responsive').css('position','absolute');
+    $('.img-responsive').css('display','hidden');
+    
+  } else {
+    $('.img-responsive').width((width-30)+"px");
+    $('.img-responsive').css('margin-bottom','10px');
+  }
 	});
 </script>
