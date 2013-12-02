@@ -90,7 +90,7 @@ body {
 }
 
 .sect-titles {
-	font-size: 40px;
+	font-size: 35px;
 	color: #000;
 	font-weight: 300;
 }
@@ -250,8 +250,8 @@ body {
 
 .intro_text{
 	font-size:50px;
-	font-weight:400;
-	top:50%;
+	font-weight:700;
+	top:45%;
 	text-align:center;
 	width:100%;
 	position:absolute;
@@ -539,6 +539,17 @@ body {
 /* SLIDERS */
 
 /* ABOUT SECTION */
+#about h3 {
+	font-size:30px;
+	font-weight:700;
+	
+}
+#about h4 {
+	font-size:15px;
+	font-weight:bold;
+	padding-bottom:20px;
+	
+}
 .about-text {
 	max-width: 770px;
 	font-size: 14px;
@@ -706,8 +717,6 @@ body {
 }
 
 .qtext {
-	max-width: 1030px;
-	margin: 0 auto;
 	padding: 100px 0 ;
 	font-size: 50px;
 	font-weight: 700;
@@ -773,7 +782,7 @@ body {
 	height:  100%;
 	position:  absolute;
 	overflow:  hidden;
-	top: 50%;
+	top: 0;
 	left: 0;
 	background-color:  rgba(0,0,0, 0.5);
 	-webkit-transition:  all 0.5s linear;
@@ -978,18 +987,21 @@ body {
 .service-number-box {
 	text-align: left;
 }
+#contact .service-number-box {
+	padding-top: 30px;
+}
 
 .service-number-box h3 {
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: 600;
 	color: #333;
-	border-bottom:3px solid #222;
-	padding-bottom:15px;
-	margin-bottom:15px;
+	border-bottom:1px solid #222;
+	padding-bottom:20px;
+	margin-bottom:20px;
 }
 
 .service-number-box p {
-	color: #bcbcbc;
+	color: #555;
 }
 
 /* SERVICES SECTION */
