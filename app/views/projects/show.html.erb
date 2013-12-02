@@ -14,11 +14,11 @@
       </div>
 		</div>
 		<div class="row margint50 pos-left project-info-box">
-			<div class="col-lg-4">
+			<div class="col-lg-6">
 				<h3 class="font-Oswald">ABOUT PROJECT</h3>
 				<p class="margint20"><%= @project.description %></p>
 			</div>
-			<div class="col-lg-4">
+			<div class="col-lg-6">
 				<h3 class="font-Oswald">PROJECT DETAILS</h3>
 				<ul class="project-det margint10">
 					<li class="clearfix">
@@ -35,18 +35,18 @@
               <%= @project.made_at.strftime("%Y. %m") unless @project.made_at.nil? %>
             </div>
 					</li>
+					<li class="clearfix">
+						<div class="pull-left list-title">PROJECT WEBSITE</div>
+						<div class="pull-right list-desc">
+              <% unless @project.website_link.nil? %>
+                <%= link_to @project.website_link do %>
+                  <%= @project.website_link.html_safe %>&nbsp<i class="icon-external-link"></i>
+                <% end %>
+              <% end %>
+            </div>
+					</li>
 				</ul>
 			</div>
-			<div class="col-lg-4">
-				<h3 class="font-Oswald">PROJECT WEBSITE</h3>
-				<!-- <p class="margint20">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime dolorem.</p> -->
-        <% unless @project.website_link.nil? %>
-          <%= link_to @project.website_link do %>
-            <%= @project.website_link.html_safe %>&nbsp<i class="icon-external-link"></i>
-          <% end %>
-        <% end %>
-			</div>
-		</div>
 	</div>
 </div>
 <script src="/js/vendor/jquery-1.10.1.min.js"></script>
