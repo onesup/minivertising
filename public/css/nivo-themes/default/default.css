@@ -17,10 +17,10 @@ Supports Thumbs: true
     margin-bottom:10px;
 }
 .theme-default .nivoSlider img {
-	position:absolute;
+/*  position:absolute;*/
 	top:0px;
 	left:0px;
-	display:none;
+/*  display:none;*/
 }
 .theme-default .nivoSlider a {
 	border:0;
