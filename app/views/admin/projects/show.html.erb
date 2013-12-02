@@ -29,7 +29,9 @@
                     <div class="control-group">
                       <label class="control-label">큰 이미지</label>
                       <div class="controls">
-                        <%= image_tag @project.project_big %>
+                        <% @project.project_pictures.each do |picture|%>
+                          <p><%= image_tag picture.project_big.url(:thumb) %></p>
+                        <% end %>
                       </div>
                     </div>
                     <div class="control-group">

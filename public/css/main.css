@@ -2150,3 +2150,7 @@ div.fb_like{
   padding-top: 22px;
   padding-left: 124px;
 }
+
+@media all and (min-width: 800px) and (max-width: 1024px) {
+  #cboxPrevious{background:2px solid red;}
+}

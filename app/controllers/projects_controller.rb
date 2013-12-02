@@ -3,9 +3,7 @@ class ProjectsController < ApplicationController
 
   def image_upload
     project_picture = params["project_big"]
-    project = Project.find(eval(params["project_id"])[:value])
     @picture = ProjectPicture.new
-    @picture.project = project
     @picture.project_big = project_picture
     @picture.save
     @picture

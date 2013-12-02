@@ -10,8 +10,7 @@ class Admin::ProjectsController < ApplicationController
   end
 
   def new
-    @project = Project.create
-    @project_picture = @project.project_pictures.create
+    @project = Project.new(title: "새 프로젝트", made_at: Time.now)
   end
   
   def edit
@@ -19,10 +18,10 @@ class Admin::ProjectsController < ApplicationController
   
   def create
     @project = Project.new(project_params)
-
+    add_project_pictures
     respond_to do |format|
       if @project.save
-        format.html { redirect_to admin_project_path(@project), project: 'Project was successfully created.' }
+        format.html { redirect_to admin_project_path(@project), notice: 'Project was successfully created.' }
         format.json { render action: 'show', status: :created, location: @project }
       else
         format.html { render action: 'new' }
@@ -34,6 +33,7 @@ class Admin::ProjectsController < ApplicationController
   # PATCH/PUT /projects/1
   # PATCH/PUT /projects/1.json
   def update
+    add_project_pictures
     respond_to do |format|
       if @project.update(project_params)
         format.html { redirect_to admin_project_path(@project), project: 'Project was successfully updated.' }
@@ -65,6 +65,17 @@ class Admin::ProjectsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def project_params
       params.require(:project).permit!
+    end
+    
+    def add_project_pictures
+      unless params[:project_picture_ids] == ""
+        project_picture_ids = params[:project_picture_ids] # 맨 앞의 ',' 삭제
+        project_picture_ids = eval project_picture_ids.gsub(/^,/,'[').gsub(/$/,']')
+        project_pictures = ProjectPicture.find(project_picture_ids)
+        project_pictures.each do |picture|
+          @project.project_pictures << picture
+        end
+      end
     end
   
 end
