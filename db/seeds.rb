@@ -6,6 +6,7 @@ clients.each do |client|
     client: client, made_at: Time.now, website_link: "http://www.minivertising.kr")
   pic1 = ProjectPicture.new
   pic2 = ProjectPicture.new
+  p.project_thumbnail = open(Rails.root.to_s + "/app/assets/images/golden-gate-construction.jpg")
   pic1.project_big = open(Rails.root.to_s + "/app/assets/images/sunset.jpg")
   pic2.project_big = open(Rails.root.to_s + "/app/assets/images/Rockwell_Norman-Going_and_Coming.jpg")
   pic1.save
