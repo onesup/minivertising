@@ -44,7 +44,7 @@ $(function () {
                 <div class="control-group">
                   <label class="control-label">썸네일(510x268)</label>
                   <div>
-                    <%= image_tag @project.project_thumbnail unless @project.project_thumbnail.nil? %>
+                    <%= image_tag @project.project_thumbnail.url unless @project.project_thumbnail.nil? %>
                   </div>
                   <div class="controls">
                     <div class="uploader hover" id="project_thumbnail">
