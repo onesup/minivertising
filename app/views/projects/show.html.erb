@@ -4,13 +4,20 @@
 		<p class="margint5"><%= @project.sub_title %></p>
 		<div class="project-slider margint20">
       <div class="slider-wrapper theme-default">
-        <div id="project-slider-wrapper" class="nivoSlider">
-          <% unless @project.project_pictures.empty? %>
-            <% @project.project_pictures.each do |picture| %>
-              <%= image_tag picture.project_big.url, class: "img-responsive" %>
+        <% if is_mobile? %>
+          <div id="project-slider-wrapper" class="">
+        <% else %>
+          <div id="project-slider-wrapper" class="nivoSlider">
+        <% end %>
+            <% unless @project.project_pictures.empty? %>
+              <% @project.project_pictures.each do |picture| %>
+                <%= image_tag picture.project_big.url, class: "img-responsive" %>
+              <% end %>
             <% end %>
-          <% end %>
-        </div>
+          </div>
+        
+        
+        
       </div>
 		</div>
 		<div class="row margint50 pos-left project-info-box">
