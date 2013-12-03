@@ -66,6 +66,7 @@ body {
 
 .pos-center {
 	text-align: center;
+	height:inherit;
 }
 
 .pos-left {
@@ -89,14 +90,12 @@ body {
 }
 
 .sect-titles {
-	font-size: 40px;
+	font-size: 35px;
 	color: #000;
 	font-weight: 300;
 }
 
-.sub_title{
-	padding-top:20px;
-}
+
 
 .sect-mini-titles {
 	font-size: 30px;
@@ -251,8 +250,11 @@ body {
 
 .intro_text{
 	font-size:50px;
-	padding-top:400px;
-	font-weight:400;
+	font-weight:700;
+	top:45%;
+	text-align:center;
+	width:100%;
+	position:absolute;
 }
 
 .form-intro {
@@ -312,11 +314,9 @@ body {
 }
 
 #footer {
-	height: 160px;
 	background: #333;
 	text-align: center;
-	color: #fff;
-	padding-top:20px;
+	color: #eee;
 }
 
 .scroll-down {
@@ -537,6 +537,17 @@ body {
 /* SLIDERS */
 
 /* ABOUT SECTION */
+#about h3 {
+	font-size:30px;
+	font-weight:700;
+	
+}
+#about h4 {
+	font-size:15px;
+	font-weight:bold;
+	padding-bottom:20px;
+	
+}
 .about-text {
 	max-width: 770px;
 	font-size: 14px;
@@ -704,8 +715,6 @@ body {
 }
 
 .qtext {
-	max-width: 1030px;
-	margin: 0 auto;
 	padding: 100px 0 ;
 	font-size: 50px;
 	font-weight: 700;
@@ -725,7 +734,6 @@ body {
 }
 
 #about .container{
-	padding-bottom:80px;
 	text-align:left;
 }
 
@@ -768,7 +776,6 @@ body {
 }
 
 .work-list ul li .mask {
-	padding-top: 80px;
 	width: 100%;
 	height:  100%;
 	position:  absolute;
@@ -876,7 +883,12 @@ body {
 
 /* SERVICES SECTION */
 #services p {
-	color: #222;
+	text-align:left;
+}
+
+#services .sub_title{
+	padding-top:20px;
+	text-align:center;
 }
 
 .services-list {
@@ -973,18 +985,21 @@ body {
 .service-number-box {
 	text-align: left;
 }
+#contact .service-number-box {
+	padding-top: 30px;
+}
 
 .service-number-box h3 {
-	font-size: 17px;
+	font-size: 16px;
 	font-weight: 600;
 	color: #333;
-	border-bottom:3px solid #222;
-	padding-bottom:15px;
-	margin-bottom:15px;
+	border-bottom:1px solid #222;
+	padding-bottom:20px;
+	margin-bottom:20px;
 }
 
 .service-number-box p {
-	color: #bcbcbc;
+	color: #555;
 }
 
 /* SERVICES SECTION */
@@ -1661,8 +1676,18 @@ a.submit-button:hover {
   color: #000;
 }
 #footer h5 {
-	font-size: 12px;
-	font-weight: 400;
+	font-size: 30px;
+	font-weight: 700;
+	color:#555;
+	background:#111;
+	padding:40px 0;
+}
+#footer p {
+	font-weight: 300;
+	letter-spacing:1px;
+	padding:15px 0;
+	font-size:11px;
+	color:#999;
 }
 
 /* CONTACT SECTION */
