@@ -1682,6 +1682,13 @@ a.submit-button:hover {
 	background:#111;
 	padding:40px 0;
 }
+#footer p {
+	font-weight: 300;
+	letter-spacing:1px;
+	padding:15px 0;
+	font-size:11px;
+	color:#999;
+}
 
 /* CONTACT SECTION */
 
