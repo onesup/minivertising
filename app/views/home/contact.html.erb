@@ -1,5 +1,12 @@
 <div id="contact">
-	<h1 class="sect-titles font-Oswald padt60">CONTACT</h1>
+  <% if is_mobile? %>
+    <div class="close_button">
+      <%= link_to home_path do %>
+        <img src="/img/prjct-close.png"/>
+      <% end %>
+    </div>
+  <% end %>
+	<h1 class="sect-titles font-Oswald padt20">CONTACT</h1>
 	<div class="container padb60">
 		<div class="row margint50 contact-area">
 			<div class="col-lg-12 col-sm-12 contact-form-area">
