@@ -1,11 +1,9 @@
 <div id="wrapper">
 	<div class="container pos-center projects">
-		<h2 class="font-Oswald margint60"><%= @project.title %></h2>
-		<p class="margint5"><%= @project.sub_title %></p>
-		<div class="project-slider margint20">
+	<div class="project-slider margint40">
       <div class="slider-wrapper theme-default">
         <% if is_mobile? %>
-          <div id="project-slider-wrapper" class="">
+         <div id="project-slider-wrapper" class="">
         <% else %>
           <div id="project-slider-wrapper" class="nivoSlider">
         <% end %>
@@ -15,18 +13,15 @@
               <% end %>
             <% end %>
           </div>
-        
-        
-        
-      </div>
-		</div>
+        </div>
+	</div>
 		<div class="row margint50 pos-left project-info-box">
 			<div class="col-lg-6">
-				<h3 class="font-Oswald">ABOUT PROJECT</h3>
-				<p class="margint20"><%= @project.description %></p>
+				<h2 class="font-Oswald margint20"><%= @project.title %></h2>
+				<p class="margint5"><%= @project.sub_title %></p>
+				<p class="margint5"><%= @project.description %></p>
 			</div>
 			<div class="col-lg-6">
-				<h3 class="font-Oswald">PROJECT DETAILS</h3>
 				<ul class="project-det margint10">
 					<li class="clearfix">
 						<div class="pull-left list-title">CATEGORY</div>
