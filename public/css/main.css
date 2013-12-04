@@ -823,8 +823,12 @@ div.close_button{
 }
 
 .work-list ul li .mask h2 {
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: 400;
+	top:50%;
+	position:absolute;
+	text-align:center;
+	width:100%;
 }
 
 .work-list ul li .mask i {
@@ -1672,12 +1676,12 @@ ul.contact_detail li{
 }
 
 .submit-button {
-  color: #000;
+  color: #fff;
   text-decoration: none;
-	width: 130px !important;
+	width: 100% !important;
   padding: 10px 10px;
 	height: 40px;
-	background-color: #ffeb00;
+	background-color: #222;
 	font-weight: 700;
 	border: 0 !important;
 	outline: 0 !important;

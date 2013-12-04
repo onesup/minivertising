@@ -1,6 +1,6 @@
 @media screen and (max-width:959px) {
   [class*="col-"]{padding-top:15px;padding-bottom:15px;}
-  .qtext{padding:50px 5% 0 5%;}
+  .qtext{padding:50px 5% 50px 5%;}
   .qname{padding-bottom:50px;}
   .work-list{margin-left:0px;width:100% !important;}
   #client-list{padding:0 100px;margin-top:30px !important;}
