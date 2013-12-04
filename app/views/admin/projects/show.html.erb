@@ -15,6 +15,12 @@
                       </div>
                     </div>
                     <div class="control-group">
+                      <label class="control-label">파트너 로고</label>
+                      <div class="controls partner_logo" style="background: #bbb">
+                        <%= image_tag @project.partner_logo %>
+                      </div>
+                    </div>
+                    <div class="control-group">
                       <label class="control-label" for="focusedInput">제목</label>
                       <div class="controls">
                         <span class="input-xlarge uneditable-input"><%= @project.title %></span>

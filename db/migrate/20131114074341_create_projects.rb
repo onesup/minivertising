@@ -10,7 +10,7 @@ class CreateProjects < ActiveRecord::Migration
       t.datetime :made_at
       t.string :website_link
       t.text :project_thumbnail
-      t.text :project_big
+      t.text :partner_logo
       t.text :images
       t.timestamps
     end

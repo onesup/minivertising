@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 20131115083330) do
     t.datetime "made_at"
     t.string   "website_link"
     t.text     "project_thumbnail"
-    t.text     "project_big"
+    t.text     "partner_logo"
     t.text     "images"
     t.datetime "created_at"
     t.datetime "updated_at"

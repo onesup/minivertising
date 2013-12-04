@@ -3,14 +3,18 @@
     <%= link_to project_path(project.id), class: "project-group", title: "" do %>
       <%= image_tag project.project_thumbnail.url, class: "img-responsive"%>
   		<div class="mask">
-  			<h2 class="font-Oswald">모바일 <%= project.title %></h2>
+  			<h2 class="font-Oswald"><%= project.title %></h2>
   		</div>
     <% end %>
   <% else %>
     <%= link_to project_path(project.id), class: "iframe portfolio-group cboxElement", title: "" do %>
       <%= image_tag project.project_thumbnail.url, class: "img-responsive"%>
   		<div class="mask">
-  			<h2 class="font-Oswald"><%= project.title %></h2>
+        <% unless project.partner_logo.url.nil? %>
+          <%= image_tag project.partner_logo.url, class: "img-responsive" %>
+        <% else%>
+          <h2 class="font-Oswald"><%= project.title %></h2>
+        <% end %>
   		</div>
     <% end %>
   <% end %>

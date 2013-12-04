@@ -53,6 +53,18 @@ $(function () {
                     <span class="help-inline">리스트의 썸네일 표시.</span>
                   </div>
                 </div>
+                <div class="control-group">
+                  <label class="control-label">파트너사 로고(510x268)</label>
+                  <div>
+                    <%= image_tag @project.partner_logo.url unless @project.partner_logo.nil? %>
+                  </div>
+                  <div class="controls">
+                    <div class="uploader hover" id="partner_logo">
+                      <%= f.file_field :partner_logo %>
+                    </div>
+                    <span class="help-inline">썸네일에 덮일 파트너사 로고.</span>
+                  </div>
+                </div>
                   <div class="control-group">
                     <label class="control-label">원래크기(1170x615)</label>
                     <% @project.project_pictures.each do |picture| %>
