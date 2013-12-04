@@ -1,20 +1,29 @@
 <div id="wrapper">
 	<div class="container pos-center projects">
-	<div class="project-slider margint40">
+    <% if is_mobile? %>
+      <div class="close_button">
+        <%= link_to home_path do %>
+          <img src="/img/prjct-close.png"/>
+        <% end %>
+      </div>
+    <% end %>
+		
+		<p class="margint5"><%= @project.sub_title %></p>
+		<div class="project-slider margint40">
       <div class="slider-wrapper theme-default">
         <% if is_mobile? %>
          <div id="project-slider-wrapper" class="">
         <% else %>
           <div id="project-slider-wrapper" class="nivoSlider">
         <% end %>
-            <% unless @project.project_pictures.empty? %>
-              <% @project.project_pictures.each do |picture| %>
-                <%= image_tag picture.project_big.url, class: "img-responsive" %>
-              <% end %>
+          <% unless @project.project_pictures.empty? %>
+            <% @project.project_pictures.each do |picture| %>
+              <%= image_tag picture.project_big.url, class: "img-responsive" %>
             <% end %>
-          </div>
+          <% end %>
         </div>
-	</div>
+      </div>
+		</div>
 		<div class="row margint50 pos-left project-info-box">
 			<div class="col-lg-6">
 				<h2 class="font-Oswald margint20"><%= @project.title %></h2>

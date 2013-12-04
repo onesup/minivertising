@@ -51,7 +51,7 @@
 		</div>
 		<div class="container margint60">
 			<div class="row col-sm-6">
-				<h3>NEXT IS</h3>
+				<h3>NEXT ADVERTISING</h3>
 			</div>	
 			<div class="row col-sm-6">
 				<h4>새로운 광고가 필요한 이유가,<br> 미니버타이징이 탄생된 이유입니다.</h4>
@@ -151,19 +151,29 @@
 			<div class="row marginb60 service-number-box">
 				<div class="col-lg-3 col-sm-6">
 					<h3 class="font-Oswald margint20">ADDRESS</h3>
-					<p>서울특별시 서초구 방배동 856-1</p>					
+					<a href="http://dmaps.kr/gx25" class="address" target="_blank">
+            <p>서울특별시 서초구 방배동 856-1</p>
+          </a>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<h3 class="font-Oswald margint20">PHONE / FAX</h3>
-					<p>02-532-2475 / 02-532-2493</p>
+					<p><a href="tel:+82-2-532-2475" class="telephone">02-532-2475</a> / 02-532-2493</p>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<h3 class="font-Oswald margint20">MAIL</h3>
-					<p>contact@minivertising.kr</p>					
+					<a href="mailto:contact@minivertising.kr" class="email-address">
+            <p>contact@minivertising.kr</p>
+          </a>
 				</div>
 				<div class="col-lg-3 col-sm-6">
 					<h3 class="font-Oswald margint20">PROJECT</h3>
-					<p><%= link_to "REQUEST", contact_path, class: "submit-button margint20" %></p>					
+					<p>
+            <% if is_mobile? %>
+              <%= link_to "REQUEST", contact_path, class: "submit-button margint20 cboxElement" %>
+            <% else %>
+              <%= link_to "REQUEST", contact_path, class: "submit-button margint20 cboxElement" %>
+            <% end %>
+          </p>					
 				</div>
 			</div>
       </div>
