@@ -558,6 +558,10 @@ div.close_button{
 	font-size:15px;
 	font-weight:bold;
 	padding-bottom:20px;
+	border-top:1px solid #222;
+	padding-top:20px;
+	line-height:20px;
+	letter-spacing:-1px;
 	
 }
 .about-text {
@@ -844,8 +848,8 @@ div.close_button{
 }
 
 .projects h2 {
-	font-weight: 400;
-	font-size: 26px;
+	font-weight: bold;
+	font-size: 15px;
 }
 
 .projects p {
