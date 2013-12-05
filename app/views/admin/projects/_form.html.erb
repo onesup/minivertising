@@ -53,7 +53,7 @@ $(function () {
                     <span class="help-inline">리스트의 썸네일 표시.</span>
                   </div>
                 </div>
-                <div class="control-group">
+                <div class="control-group" style="background: #aaa">
                   <label class="control-label">파트너사 로고(510x268)</label>
                   <div>
                     <%= image_tag @project.partner_logo.url unless @project.partner_logo.nil? %>
@@ -65,30 +65,42 @@ $(function () {
                     <span class="help-inline">썸네일에 덮일 파트너사 로고.</span>
                   </div>
                 </div>
-                  <div class="control-group">
-                    <label class="control-label">원래크기(1170x615)</label>
-                    <% @project.project_pictures.each do |picture| %>
-                      <div class="project_big_thumb" picture-id="<%= picture.id %>">
-                        <p>
-                          <%= image_tag picture.project_big.url(:thumb) %>
-                        </p>
-                        <p>
-                          <%= 
-                            link_to 'Destroy', picture, remote: :true, method: :delete, 
-                              class: "project_picture_destroy", data: { confirm: '레알 삭제?' } 
-                            %>
-                        </p>
-                      </div>
-                    <% end %>
-                    <div class="controls">
-                      <div class="uploader hover" id="project_big">
-                        <%= file_field_tag :project_big, id: "big_image", :multiple => true, "data-url" => image_upload_projects_path(:json) %>
-                        <p></p>
-                      </div>
-                      <span class="help-inline">메인페이지 표시. (복수 이미지 업로드 가능)</span>
-                    </div>
+                <div class="control-group">
+                  <label class="control-label">동영상 링크</label>
+                  <div>
+                    <%= @project.video_link unless @project.video_link.nil? %>
                   </div>
-                  <%# end %>
+                  <div class="controls">
+                    <div class="uploader hover" id="project_thumbnail">
+                      <%= f.input :project_thumbnail %>
+                    </div>
+                    <span class="help-inline">프로젝트 소개 vimeo 링크</span>
+                  </div>
+                </div>
+                <div class="control-group">
+                  <label class="control-label">원래크기(1170x615)</label>
+                  <% @project.project_pictures.each do |picture| %>
+                    <div class="project_big_thumb" picture-id="<%= picture.id %>">
+                      <p>
+                        <%= image_tag picture.project_big.url(:thumb) %>
+                      </p>
+                      <p>
+                        <%= 
+                          link_to 'Destroy', picture, remote: :true, method: :delete, 
+                            class: "project_picture_destroy", data: { confirm: '레알 삭제?' } 
+                          %>
+                      </p>
+                    </div>
+                  <% end %>
+                  <div class="controls">
+                    <div class="uploader hover" id="project_big">
+                      <%= file_field_tag :project_big, id: "big_image", :multiple => true, "data-url" => image_upload_projects_path(:json) %>
+                      <p></p>
+                    </div>
+                    <span class="help-inline">메인페이지 표시. (복수 이미지 업로드 가능)</span>
+                  </div>
+                </div>
+                <%# end %>
                 <div class="control-group">
                   <label class="control-label" for="focusedInput">제목</label>
                   <div class="controls">

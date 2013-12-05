@@ -4,6 +4,7 @@ Minivertising::Application.routes.draw do
   get 'test', to: 'home#test'
   get 'admin', to: 'admin/dashboard#index'
   get 'contact', to: 'home#contact'
+  get 'kakao', to: 'home#kakao'
   
   resources :projects do
     member do

@@ -6,4 +6,7 @@ class HomeController < ApplicationController
   def contact
     @projects = Project.order("created_at desc").limit(8)
   end
+  
+  def kakao
+  end
 end
