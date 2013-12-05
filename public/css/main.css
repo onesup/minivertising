@@ -798,7 +798,7 @@ div.close_button{
 	overflow:  hidden;
 	top: 0;
 	left: 0;
-	background-color:  rgba(0,0,0, 0.5);
+	background-color:  rgba(255,255,255, 0.8);
 	-webkit-transition:  all 0.5s linear;
 	-moz-transition:  all 0.5s linear;
 	-o-transition:  all 0.5s linear;
@@ -1682,7 +1682,7 @@ ul.contact_detail li{
 .submit-button {
   color: #fff;
   text-decoration: none;
-	width: 100% !important;
+	width: 50% !important;
   padding: 10px 10px;
 	height: 40px;
 	background-color: #222;
@@ -1690,11 +1690,12 @@ ul.contact_detail li{
 	border: 0 !important;
 	outline: 0 !important;
 	margin-right: -10px;
+	display:block;
 }
 a.submit-button:hover,
 a.submit-button:focus {
   text-decoration: none;
-  color: #000;
+  color:#eee;
 }
 #footer h5 {
 	font-size: 30px;
