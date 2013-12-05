@@ -1515,9 +1515,6 @@ width:220px;
 * html .clearfix             { zoom: 1; } /* IE6 */
 *:first-child+html .clearfix { zoom: 1; } /* IE7 */
 
-
-
-
 @media (max-width: 480px ) {
 
 	.container,
@@ -1704,8 +1701,3 @@ width:220px;
 	}
 	
 }
-
-
-
-
-
