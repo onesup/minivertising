@@ -52,16 +52,16 @@
               <%= @project.made_at.strftime("%Y. %m") unless @project.made_at.nil? %>
             </div>
 					</li>
-					<li class="clearfix">
-						<div class="pull-left list-title">PROJECT WEBSITE</div>
-						<div class="pull-right list-desc">
-              <% unless @project.website_link.nil? %>
-                <%= link_to @project.website_link do %>
-                  <%= @project.website_link.html_safe %>&nbsp<i class="icon-external-link"></i>
-                <% end %>
-              <% end %>
-            </div>
-					</li>
+          <% unless (@project.website_link.nil? or @project.website_link == "") %>
+  					<li class="clearfix">
+  						<div class="pull-left list-title">PROJECT WEBSITE</div>
+  						<div class="pull-right list-desc">
+                  <%= link_to @project.website_link do %>
+                    <%= @project.website_link.html_safe %>&nbsp<i class="icon-external-link"></i>
+                  <% end %>
+              </div>
+  					</li>
+          <% end %>
 				</ul>
 			</div>
 	</div>
