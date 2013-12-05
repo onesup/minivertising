@@ -150,7 +150,7 @@ var ScrolleAnimation = function(){
 /* Navigation */
 var ScrolleNavigation = function(){
 	var nav = responsiveNav("#nav",{
-	  label: "<img class='mobile-logo' src='/img/mobile_logo.png' style='margin-top: 8px;'/>"
+	  label: "<img class='mobile-logo' src='/img/mobile_logo.png' style='margin-top: 12px;'/>"
 	});
 	$('#nav').onePageNav({
 		scrollSpeed: 600,

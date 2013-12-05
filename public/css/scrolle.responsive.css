@@ -48,6 +48,9 @@
     display:block;
     background:url(../img/mobile-nav-icon.png) #000 no-repeat right 12px center;
   }
+  .intro_text{
+    top: 20%;
+  }
   .js .nav-collapse{max-height:0;position:absolute;display:block;overflow:hidden;}
   #nav li.sectionLink{width:100%;}
   #nav li.sectionLink a span{font-size:16px;}
