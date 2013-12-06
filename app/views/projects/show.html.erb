@@ -10,7 +10,7 @@
 		
 		<p class="margint5"><%= @project.sub_title %></p>
 		<div class="project-slider margint40">
-      <% unless @project.video_link.nil? %>
+      <% unless (@project.video_link.nil? or @project.video_link == "") %>
       <div class="flex-video">
         <%=raw @project.video_link %>
       </div>

@@ -43,13 +43,7 @@
                     <div class="control-group">
                       <label class="control-label">동영상 링크</label>
                       <div class="controls ">
-                        <%=raw @project.video_link %>
-                      </div>
-                    </div>
-                    <div class="control-group">
-                      <label class="control-label">등록일시</label>
-                      <div class="controls">
-                        <span class=""><%= @project.created_at %></span>
+                        <%= @project.video_link %>
                       </div>
                     </div>
 
@@ -81,6 +75,12 @@
                       </div>
                     </div>
                     
+                    <div class="control-group">
+                      <label class="control-label">등록일시</label>
+                      <div class="controls">
+                        <span class=""><%= @project.created_at %></span>
+                      </div>
+                    </div>
                     
                     <div class="form-actions">
                       <%= link_to "목록으로", admin_projects_path, class: "btn"%>
