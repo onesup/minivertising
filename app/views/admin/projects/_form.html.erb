@@ -42,6 +42,13 @@ $(function () {
              <form class="form-horizontal">
               <fieldset>
                 <div class="control-group">
+                  <label class="control-label" for="focusedInput">노출순서</label>
+                  <div class="controls">
+                    <%= f.text_field :order_no, id: "order_no", class: "input-xlarge focused" %>
+                    <span class="help-inline">숫자가 클수록 상단 노출(z-index처럼)</span>
+                  </div>
+                </div>
+                <div class="control-group">
                   <label class="control-label">썸네일(510x268)</label>
                   <div>
                     <%= image_tag @project.project_thumbnail.url unless @project.project_thumbnail.nil? %>

@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   def index
-    @projects = Project.order("created_at desc").limit(8)
+    @projects = Project.order("order_no desc").limit(8)
   end
 
   def contact

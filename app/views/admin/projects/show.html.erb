@@ -9,6 +9,12 @@
                  <form class="form-horizontal">
                   <fieldset>
                     <div class="control-group">
+                      <label class="control-label">노출순서</label>
+                      <div class="controls">
+                        <span class=""><%= @project.order_no %></span>
+                      </div>
+                    </div>
+                    <div class="control-group">
                       <label class="control-label">썸네일 이미지</label>
                       <div class="controls">
                         <%= image_tag @project.project_thumbnail %>

@@ -10,6 +10,7 @@
       <thead>
         <tr>
         <th>#</th>
+        <th>노출순서</th>
         <th>프로젝트명</th>
         <th>카테고리</th>
         <th>관리</th>
@@ -19,6 +20,7 @@
         <% @projects.each do |project| %>
         <tr class="">
           <td><%= project.id %></td>
+          <td><%= project.order_no %></td>
           <td class="center"><%= project.title %></td>
           <td class="center"><%= project.category %></td>
           <td class="center">
