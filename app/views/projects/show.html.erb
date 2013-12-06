@@ -46,12 +46,12 @@
 						<div class="pull-left list-title">CLIENT</div>
 						<div class="pull-right list-desc"><%= @project.client %></div>
 					</li>
-					<li class="clearfix">
-						<div class="pull-left list-title">DATE</div>
-						<div class="pull-right list-desc">
-              <%= @project.made_at.strftime("%Y. %m") unless @project.made_at.nil? %>
+          <!-- <li class="clearfix">
+            <div class="pull-left list-title">DATE</div>
+            <div class="pull-right list-desc">
+              <%#= @project.made_at.strftime("%Y. %m") unless @project.made_at.nil? %>
             </div>
-					</li>
+          </li> -->
           <% unless (@project.website_link.nil? or @project.website_link == "") %>
   					<li class="clearfix">
   						<div class="pull-left list-title">PROJECT WEBSITE</div>
